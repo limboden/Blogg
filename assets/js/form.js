@@ -13,7 +13,15 @@ function handleFormSubmission(event) {
     content: contentElement.value,
   }
 
-  localStorage.setItem('formDetails', JSON.stringify(formDetails))
+  if (formDetails.username && formDetails.title && formDetails.content) {
+    localStorage.setItem('formDetails', JSON.stringify(formDetails))
+    redirectPage('blog.html')
+  } else {
+
+  }
+
+
+
 }
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 formElement.addEventListener('submit', handleFormSubmission)

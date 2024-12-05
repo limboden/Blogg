@@ -1,5 +1,5 @@
 // TODO: Create logic to toggle the light/dark mode styles for the page and circle. The mode should be saved to local storage.
-
+const formElement = document.querySelector('form')
 
 function readLocalLightStorage() {
   const lightStorage = localStorage.getItem("lightMode")
@@ -26,6 +26,12 @@ function storeLocalStorage(object) {
 }
 
 // ! Use the following function whenever you need to redirect to a different page
+
+formElement.addEventListener('submit', function rP(id) {
+  return function () {
+    redirectPage(id)
+  };
+});
 
 let redirectURL = '';
 
